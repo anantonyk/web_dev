@@ -1,0 +1,60 @@
+﻿body
+{
+    background-color:saddlebrown;
+}
+.image {
+    background-image: url('../image/image.jpg');
+    overflow: auto;
+    min-height: 100%;
+    height:1000px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.header {
+    border-color: ActiveBorder;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 15%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:xx-large;
+    
+}
+.name {
+    border-color: ActiveBorder;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
+.project {
+    border-color: ActiveBorder;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
+@media(max-width:568px) {
+    .img {
+        background-attachment: scroll;
+    }
+}
