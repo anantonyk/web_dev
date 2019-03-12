@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,11 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>enabled_disabled</title>
-</head>
+<?php
+setcookie("test_cookie", "test", time() + 3600, '/');
+?>
+<html>
 <body>
-    <form action="back/enabled_disabled.php">
-    	<p>Is cookies enabled?</p>
-      <input type="submit" value="Check" name="submit">
-    </form>
+
+<?php
+$txt1="Cookies are enabled.";
+$txt2="Cookies are disabled.";
+if(count($_COOKIE) > 0) {
+    echo "<p>" . $txt1 . "</p>";
+} else {
+    echo "<p>" . $txt2 . "</p>";
+}
+?>
+
 </body>
 </html>

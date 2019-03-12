@@ -4,11 +4,11 @@
 
 
 .leftframe {
-    width: 80%;
+   width: 75%;
     
 }
 .rightframe {
-    width: 18%;
+   width: 18%;
     
 }
 .leftframe, .rightframe {
@@ -41,3 +41,9 @@ p, a, iframe{
 
 }
 
+h1 {
+    font-family: Franklin Gothic ;
+    font-size: 100px;
+    font-style: bold, italic;
+    color: darkgreen;
+}

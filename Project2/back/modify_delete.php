@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,11 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>modify_delete</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head >
+<?php
+// set the expiration date to one hour ago
+$cookie_name = "anantonyk";
+setcookie($cookie_name, "", time() - 3600);
+?>
+
 <body>
-    <form action="back/modify_delete.php">
-    	<p>Do you want to delete cookie?</p>
-      <input type="submit" value="Delete" name="submit">
-    </form>
+
+<?php
+echo "<p>". "Cookie is deleted." . "</p>";
+?>
+
 </body>
 </html>

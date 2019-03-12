@@ -1,6 +1,8 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +12,14 @@
     <title>destroy</title>
 </head>
 <body>
-    <form action="back/destroy.php">
-    	<p>Destroy session?</p>
-      <input type="submit" value="Destroy" name="submit">
-    </form>
+
+<?php
+// remove all session variables
+session_unset(); 
+// destroy the session 
+session_destroy(); 
+echo "<p>". "Session has destroyed."."</p>";
+?>
+
 </body>
 </html>
