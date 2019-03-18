@@ -1,0 +1,49 @@
+﻿body {
+    background-color: lightgreen;
+}
+
+
+.leftframe {
+   width: 75%;
+    
+}
+.rightframe {
+   width: 18%;
+    
+}
+.leftframe, .rightframe {
+    min-height: calc(100vh - 50px);
+    background-color: lightgreen;
+    border: 5px solid green;
+}
+.frames {
+    width: 55%;
+    height: 130px;
+    border: none;
+    margin-left: 2%;
+    font-family: 'Franklin Gothic Medium';
+    color: darkgreen;
+    font-style: italic;
+}
+.bigframes {
+    width: 55%;
+    height: 260px;
+    margin-left: 2%;
+    border: none;
+    font-family: 'Franklin Gothic Medium';
+    color: darkgreen;
+    font-style: italic;
+}
+p, a, iframe{
+    font-family:'Franklin Gothic Medium';
+    color: darkgreen;
+    font-style:italic;
+
+}
+
+h1 {
+    font-family: Franklin Gothic ;
+    font-size: 100px;
+    font-style: bold, italic;
+    color: darkgreen;
+}
