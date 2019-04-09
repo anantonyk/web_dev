@@ -1,0 +1,534 @@
+/*-------------
+ 	General
+-------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 0.9;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: #2196F3;
+	font-weight: 800;
+	text-align: center;
+}
+
+hr{
+	width: 150px;
+	height: 2px;
+	background-color: #2196F3;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 125px 100px;
+}
+
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+section h3.title{
+	color: #414a4f;
+	text-transform: capitalize; 
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+section p{
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+
+header h2{
+	font-family: 'Quicksand', sans-serif;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin: 0 15px;
+}
+
+header nav li:first-child{
+	margin-left: 0;	
+}
+
+header nav li:last-child{
+	margin-right: 0;	
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*----------------
+ 	Hero Section
+----------------*/
+
+.hero{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.hero .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+	z-index: -1;
+}
+
+.hero .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #414a4f;
+	opacity: 0.75;
+}
+
+.hero h1{
+	font: bold 60px 'Open Sans', sans-serif;
+	margin-bottom: 15px;
+}
+
+.hero h3{
+	font: normal 28px 'Open Sans', sans-serif;
+	margin-bottom: 40px;
+}
+
+.hero a.btn{
+	padding: 20px 46px;
+}
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+
+/*--------------------
+ 	slide show Section
+---------------------*/
+
+.slideshow{
+	background-image: url(assets/img/mountain.jpg);
+}
+
+.slideshow {
+  width: 625px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideshow-container {
+  width: 2500px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 300px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+img, .text-container {
+  width: 625px;
+  height: 300px;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}
+
+.slide {
+  animation: slide 24s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+   
+  	transform: translateX(38%);
+  }
+  50% {
+    transform: translateX(-38%);
+  }
+  100%{
+  	transform: translateX(38%);
+  }
+}
+
+
+.p {
+  margin-top: 140px;
+  text-align: center;
+}
+
+
+
+/*----------------------
+ 	zebra table section
+----------------------*/
+
+.zebratable{
+	background-color: #f7f7f7;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+
+
+/*--------------------
+ 	flexbox Section
+--------------------*/
+
+.flexbox{
+	background-color: #fff;
+}
+.flex-container {
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.flex-container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+   flex-flow: row wrap;
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+.hide_show{
+	background-color: #f1f1f1;
+}
+
+.panel-wrapper {
+  position: relative;
+}
+
+.btn {
+  color: #f2f2f2;
+  border-radius: 1.5em;
+  left: 30%;
+  padding: 1em;
+  text-decoration: none;
+  width: 40%;
+}
+.show, .hide {
+  position: absolute;
+  bottom: -1em;
+  z-index: 100;
+  text-align: center;
+}
+
+.hide {display: none;}
+.show:target {display: none;}
+.show:target ~ .hide {display: block;}
+.show:target ~ .panel {
+   max-height: 2000px; 
+}
+.show:target ~ .fade {
+  margin-top: 0;
+}
+
+.panel {
+  position: relative;
+  margin: 2em auto;
+  width: 70%;
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height .5s ease;
+}
+.fade {
+  background: linear-gradient(to bottom, rgba($bg-color,0) 0%,rgba($bg-color,1) 75%);
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+}
+
+.contact {
+	background: #fff;
+	padding-top: 10px;
+}
+.contactme {
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+	padding: 10px;
+}
+
+.hr1{
+	margin-bottom: 0px;
+}
+ .map {
+            width: 45%;
+            margin-right: 10%;
+            
+        }
+ .forms {
+            width: 45%;
+         
+        }
+  .map ,.forms {
+ 	   height: 500px;
+ }
+
+ .myinfo{
+ 	background: #f1f1f1;
+ }
+/*-------------
+ 	Footer
+-------------*/
+
+
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 60px 0;
+}
+
+footer ul{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+footer ul li{
+	margin: 0 8px;	
+}
+
+footer ul li:first-child{
+	margin-left: 0;	
+}
+
+footer ul li:last-child{
+	margin-right: 0;	
+}
+
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+
+footer p a{
+	color: #fff;
+}
+
+@media (max-width: 700px){
+
+	footer{
+		padding: 80px 15px;
+	}
+
+}
+
+
+
+
+/* -- Demo ads -- */
+
+@media (max-width: 1200px) {
+	#bsaHolder{ display:none;}
+}
+
+
+
+.phonelink{
+  position: fixed; /* Lock location always on the scree */
+  bottom: 0; /* Set to the bottom */
+  right: 0; /* Set to the right */
+  margin: 30px; /* Add space around background */
+}
+.phoneicon{
+  width: 60px; /* Set width of icon */
+  height: 60px; /* Set height of icon */
+  opacity: 0.7;
+}
+.phoneicon:hover{
+  opacity: 1;
+}
+
+@media screen and (max-width: 480px){
+  .lgscreenphone{
+    display: none;  /* On small screens make phone icon disappear */
+  }
+  .mbscreenphone{
+    display: block; /* On small screens make phone icon appear */
+  }
+}
+@media screen and (min-width: 481px){
+  .mbscreenphone{
+    display: none; /* On large screens make phone icon disappear */
+  }
+  .lgscreenphone{
+    display: block; /* On large screens make phone icon appear */
+  }
+}
